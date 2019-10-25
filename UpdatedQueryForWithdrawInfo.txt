@@ -1,0 +1,23 @@
+UPDATE ggldb.comm_overr_details SET commission_amt=100, overriding_amt=50, created_date='2019-07-09', Member_ID=250, value_type='subtract', status='approved', Member_Number='GLGG136' WHERE Com_Overr_ID=97;
+DELETE FROM ggldb.comm_overr_details WHERE Com_Overr_ID=66;
+UPDATE ggldb.comm_overr_details SET commission_amt=1, overriding_amt=1, created_date='2019-07-09', Member_ID=258, value_type='subtract', status='approved', Member_Number='GLGG144' WHERE Com_Overr_ID=83;
+UPDATE ggldb.comm_overr_details SET commission_amt=1, overriding_amt=0.5, created_date='2019-07-09', Member_ID=258, value_type='subtract', status='approved', Member_Number='GLGG144' WHERE Com_Overr_ID=86;
+UPDATE ggldb.comm_overr_details SET commission_amt=1, overriding_amt=1, created_date='2019-07-09', Member_ID=258, value_type='subtract', status='approved', Member_Number='GLGG144' WHERE Com_Overr_ID=92;
+UPDATE ggldb.comm_overr_details SET commission_amt=0, overriding_amt=0.5, created_date='2019-07-10', Member_ID=258, value_type='subtract', status='approved', Member_Number='GLGG144' WHERE Com_Overr_ID=109;
+UPDATE ggldb.comm_overr_details SET commission_amt=3, overriding_amt=1.5, created_date='2019-07-12', Member_ID=258, value_type='subtract', status='approved', Member_Number='GLGG144' WHERE Com_Overr_ID=117;
+UPDATE ggldb.comm_overr_details SET commission_amt=2, overriding_amt=1, created_date='2019-07-12', Member_ID=258, value_type='added', status='approved', Member_Number='GLGS164' WHERE Com_Overr_ID=120;
+UPDATE ggldb.comm_overr_details SET commission_amt=2, overriding_amt=0, created_date='2019-07-09', Member_ID=268, value_type='added', status='approved', Member_Number='GLGS156' WHERE Com_Overr_ID=94;
+DELETE FROM ggldb.comm_overr_details WHERE Com_Overr_ID=104;
+UPDATE ggldb.comm_overr_details SET commission_amt=0, overriding_amt=0.5, created_date='2019-07-12', Member_ID=271, value_type='subtract', status='approved', Member_Number='GLGG157' WHERE Com_Overr_ID=116;
+UPDATE ggldb.comm_overr_details SET commission_amt=1, overriding_amt=0.5, created_date='2019-07-12', Member_ID=279, value_type='subtract', status='approved', Member_Number='GLGG165' WHERE Com_Overr_ID=126;
+UPDATE ggldb.comm_overr_details SET commission_amt=0, overriding_amt=0.5, created_date='2019-07-13', Member_ID=279, value_type='subtract', status='approved', Member_Number='GLGG165' WHERE Com_Overr_ID=140;
+
+DELETE FROM ggldb.comm_overr_details WHERE Com_Overr_ID=325;
+
+INSERT INTO ggldb.comm_overr_details(Com_Overr_ID, commission_amt, overriding_amt, created_date, Member_ID, value_type, status, Member_Number) VALUES(54, 100, 50, '2019-07-05', 253, 'added', 'approved', 'GLGG140');
+INSERT INTO ggldb.comm_overr_details(Com_Overr_ID, commission_amt, overriding_amt, created_date, Member_ID, value_type, status, Member_Number) VALUES(106, 100, 50, '2019-07-09', 253, 'added', 'approved', 'GLGG140');
+
+UPDATE ggldb.comm_overr_details SET commission_amt=100, overriding_amt=100, created_date='2019-06-12', Member_ID=226, value_type='subtract', status='approved', Member_Number='GLGP112' WHERE Com_Overr_ID=24;
+UPDATE ggldb.comm_overr_details SET commission_amt=200, overriding_amt=201, created_date='2019-07-09', Member_ID=226, value_type='subtract', status='approved', Member_Number='GLGP112' WHERE Com_Overr_ID=102;
+DELETE FROM ggldb.comm_overr_details WHERE Com_Overr_ID=105;
+UPDATE ggldb.comm_overr_details SET commission_amt=0, overriding_amt=1, created_date='2019-07-12', Member_ID=226, value_type='subtract', status='approved', Member_Number='GLGP112' WHERE Com_Overr_ID=119;
