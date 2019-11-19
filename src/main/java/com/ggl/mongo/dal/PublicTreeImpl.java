@@ -240,12 +240,12 @@ public class PublicTreeImpl implements PublicTreeDAL {
 				 logger.info("----------- No Email ID----------------");
 			}
 			else{
-				logger.info("----------- Found Email ID----------------");
+				logger.info("----------- Found Public Closed Email ID----------------"+userdetails.getEmail1());
 			    //InvestmentEmail.temp8OutandOnseSavedPublicTree(member,userdetails.getEmail1());
 			     
 			    //Closed Email Start
 				member.setBookingCode(publictree.getInvoiceNumber()); 
-				InvestmentEmail.EightComeOneClosedEmail(member); 
+				InvestmentEmail.EightComeOneClosedEmail(member,userdetails.getEmail1()); 
 				Email.adminunitclosedalertEmail(member);
 			}
 		   // Save Fresh New Public Tree as Temp table end

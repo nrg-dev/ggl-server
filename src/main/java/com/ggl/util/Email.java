@@ -154,9 +154,8 @@ try {
 
 
 }
-	public static void optMailsend(User user) {
-	
-	
+
+public static void optMailsend(User user) {	
 	String otpEmailBody ="<html> <head> <style> </style> </head>"
 	+"<body lang=EN-US style='tab-interval:.5in'> <div class=Section1> <p class=MsoNormal align=center style='text-align:center'><b><u><span"
 	+"style='font-size:26.0pt;line-height:115%;color:black'>GLG OTP Notification<p></p></span></u></b></p>"
@@ -186,9 +185,9 @@ try {
 		logger.info("Exception -->"+e.getMessage());
 	}
 	
-	}
+}
 
-	public static void tipsMail(Member member){
+public static void tipsMail(Member member){
 	/*blueprintnusantaraindo@gmail.com*/
 	logger.info("----------------- Inside tipsMail-------------------");
 	String email_tips ="<html> <head> <style> </style> </head>\r\n" + 
@@ -231,10 +230,10 @@ try {
 	}
 	
 	
-	}
+}
 	
-	// For Closed GGL Member
-	public static void EightComeOneClosedEmail(Member member){
+// For Closed GGL Member
+public static void EightComeOneClosedEmail(Member member){
 		logger.info("----------------- Inside EightComeOneClosedEmail -------------------");
 		logger.info("Unit ID ------->"+member.getInvoiceNumber()); 
 		logger.info("Email ID ------->"+member.getEmailID()); 
@@ -291,9 +290,8 @@ try {
 	
 	//-------- Admin Unit Tree Closed Info ----------
 	public static void adminunitclosedalertEmail(Member member){
-		logger.info("Inside Admin Alert Unit Closed Email Method()----------------------------");
+		logger.info("Inside Admin Alert Public Unit Closed Email Method()----------------------------");
 		logger.info("Unit ID --------->"+member.getInvoiceNumber());
-	
 		String emailRegalertMessage ="<html> <head> <style> table, th, td {     border: 1px solid black;} </style> </head> "
 			+"<body lang=EN-US link=\"#0563C1\"  vlink=\"#954F72\" style='tab-interval:.5in'> <div class=Section1> <p class=MsoNoSpacing align=center style='text-align:center'><b"
 			+"style='mso-bidi-font-weight:normal;color:blue;'><u><span style='font-size:26.0pt'>GGL MEMBER UNIT CLOSED ALERT</span></u></b><b style='mso-bidi-font-weight:normal'><u><span"
@@ -350,122 +348,122 @@ try {
 	
 	public static void saveEmail(Member member,String newCodeFinal){
 	
-	logger.info("Sender Email -->"+member.getEmailID());
-	logger.info("Pay amount -->"+member.getPayAmt());
-	logger.info("Member type -->"+member.getActType());
-	logger.info("Member user name -->"+member.getUsername());
-	logger.info("Member password -->"+member.getPassword());
-	
-	String emailMessage ="<html> <head> <style> table, th, td {     border: 1px solid black;} </style> </head> "
-	+"<body lang=EN-US link=\"#0563C1\"  vlink=\"#954F72\" style='tab-interval:.5in'> <div class=Section1> <p class=MsoNoSpacing align=center style='text-align:center'><b"
-	+"style='mso-bidi-font-weight:normal'><u><span style='font-size:26.0pt'>Deposit Advice Notice</span></u></b><b style='mso-bidi-font-weight:normal'><u><span"
-	+"style='font-size:26.0pt;mso-fareast-font-family:\"Times New Roman\";mso-fareast-theme-font:"
-	+"minor-fareast;mso-fareast-language:ZH-CN'><o:p></o:p></span></u></b></p> <p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><o:p>&nbsp;</o:p></p>"
-	+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
-	+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>Please be"
-	+"informed that the following bank account in Singapore is for the purpose of collection/remitting all monies on our behalf. Please Telegraphic transfer your"
-	+"deposits into the following Bank Account (charge is applicable):<o:p></o:p></span></b></p>"
-	+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b"
-	+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
-	+"<table style=\"width:100%:border:2px;\">   <tr>    <th>Name of Bank</th>     <th>Bank Account Holder</th> "
-	+"<th>Bank Account Number</th> 	    <th>Swift Code</th>     <th>CHIPS UID Number</th>     <th>Telex Number</th>     <th>Bank Address</th>   </tr>   <tr>"
-	+"<td>DBS Bank</td>     <td>Global Gains Limited</td>     <td>003-932398-0</td> 	    <td>DBSSGSG</td>     <td>0346756</td>     <td>RS - 24455</td> <td> 12 Marina Boulevard,Marina Bay Financial Centre,Tower 3, Singapore 018982"
-	+"</td> </tr></table>"
-	
-	+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><span style='font-size:12.0pt'>"
-	+"or Bank Account in thru our partner </span></p>"
-
-	+"<table style=\"width:100%:border:2px;\">   <tr>    <th>Name of Bank</th>     <th>Bank Account Holder</th> "
-	+"<th>Bank Account Number</th> 	    <th>Swift Code</th>     <th>CHIPS UID Number</th>     <th>Telex Number</th>     <th>Bank Address</th>   </tr>   <tr>"
-	+"<td style='text-align: center;'>CIMB NIAGA</td>  <td style='text-align: center;'>Blueprint Nusatara Indonesia</td>     <td style='text-align: center;'>800077326600</td> 	    <td style='text-align: center;'>BNIAIDJA</td>     <td style='text-align: center;'>84711</td>"
-	+"<td style='text-align: center;'>60875 - 60877 NAGA HO IA</td>  <td style='text-align: center;'> GrahaNiaga / Niaga Tower Jl. Jend. SudirmanKav. 58, Jakarta 12190</td> </tr></table>"
-	
-	+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-	+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-	+"Member ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+newCodeFinal+"</span></b></p>"
-	
-	+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-	+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>Member "
-	+"fees Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+member.getPayAmt()+" SGD </span></b></p>"
-	
-	+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-	+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>Admin "
-	+"fees &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'>   "+member.getAdminFees()+" SGD </span>"
-	+"</span></b></p>"
-	
-	+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-	+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>Total"
-	+" Amount in SGD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+member.getTotalFees()+" SGD</span></b><b"
-	+"style='mso-bidi-font-weight:normal'></b></p>"
-	
-	+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-	+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-	+"Member Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+member.getTriptype()+"</span></b>"
-	+"</span></b></p>"
-	
-	
-	+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-	+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-	+"Login user name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+member.getUsername()+"</span></b>"
-	+"</span></b></p>"
-	
-	
-	+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-	+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-	+"Login password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+member.getPassword()+"</span></b>"
-	+"</span></b></p>"
-	
-	
-	
-	
-	+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b"
-	+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>After the "
-	+"deposits were made, kindly e-mail the Bank deposit slip to us at ( </span></b><a"
-	+"href=\"mailto:finance@gglway.com\"><b style='mso-bidi-font-weight:normal'><span"
-	+"style='font-size:12.0pt'>finance@gglway.com</span></b></a><b"
-	+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>). The "
-	+"original deposit slips are to be kept by customer. Should you have any queries,"
-	+"please feel free to contact us through e-mail( </span></b><a"
-	+"href=\"mailto:admin@gglway.com\"><b style='mso-bidi-font-weight:normal'><span"
-	+"style='font-size:12.0pt'>admin@gglway.com</span></b></a><b"
-	+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'> ).<o:p></o:p></span></b></p>"
-	+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-	+"style='font-size:12.0pt;line-height:115%'>The management shall hold full "
-	+"responsibilities when client deposited to the above said account.<o:p></o:p></span></b></p>"
-	+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-	+"style='font-size:12.0pt;line-height:115%'>For and on behalf of<o:p></o:p></span></b></p>"
-	+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-	+"style='font-size:12.0pt;line-height:115%'>Global Gains Limited</span></b><a"
-	+"name=\"GoBack\"></a><b style='mso-bidi-font-weight:normal'><span"
-	+"style='font-size:12.0pt;line-height:115%;font-family:\"Arial\",\"sans-serif\";"
-	+"mso-fareast-language:ZH-CN'><o:p></o:p></span></b></p> </div> </body> </html>";
-	
-	try {
-		/*Class.forName(JDBC_DRIVER);
-		con=DriverManager.getConnection(DB_URL_EMAIL, USER, PASS);
-		stmt=con.createStatement();
-		preparedStatement=con.prepareStatement("insert into email_temp (toaddress,subject,message,status) values(?,?,?,?)");
-	
-		preparedStatement.setString(1, member.getEmailID());
-		preparedStatement.setString(2, "Registration Successfully on GLG Membership"); 
-		preparedStatement.setString(3, emailMessage);// Message
-		preparedStatement.setString(4, "GGL");
-		//preparedStatement.setDate(5, );
-		preparedStatement.executeUpdate();	*/
+		logger.info("Sender Email -->"+member.getEmailID());
+		logger.info("Pay amount -->"+member.getPayAmt());
+		logger.info("Member type -->"+member.getActType());
+		logger.info("Member user name -->"+member.getUsername());
+		logger.info("Member password -->"+member.getPassword());
 		
-		logger.info("Calling Email Service -------------");
-		PushEmail.sendMail(member.getEmailID(),"Registration Successfully on GLG Membership",emailMessage);
-		logger.info("Successfully  Email Called Service------------");			
-		logger.info("Successfully Saved data.");
+		String emailMessage ="<html> <head> <style> table, th, td {     border: 1px solid black;} </style> </head> "
+		+"<body lang=EN-US link=\"#0563C1\"  vlink=\"#954F72\" style='tab-interval:.5in'> <div class=Section1> <p class=MsoNoSpacing align=center style='text-align:center'><b"
+		+"style='mso-bidi-font-weight:normal'><u><span style='font-size:26.0pt'>Deposit Advice Notice</span></u></b><b style='mso-bidi-font-weight:normal'><u><span"
+		+"style='font-size:26.0pt;mso-fareast-font-family:\"Times New Roman\";mso-fareast-theme-font:"
+		+"minor-fareast;mso-fareast-language:ZH-CN'><o:p></o:p></span></u></b></p> <p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><o:p>&nbsp;</o:p></p>"
+		+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
+		+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>Please be"
+		+"informed that the following bank account in Singapore is for the purpose of collection/remitting all monies on our behalf. Please Telegraphic transfer your"
+		+"deposits into the following Bank Account (charge is applicable):<o:p></o:p></span></b></p>"
+		+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b"
+		+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
+		+"<table style=\"width:100%:border:2px;\">   <tr>    <th>Name of Bank</th>     <th>Bank Account Holder</th> "
+		+"<th>Bank Account Number</th> 	    <th>Swift Code</th>     <th>CHIPS UID Number</th>     <th>Telex Number</th>     <th>Bank Address</th>   </tr>   <tr>"
+		+"<td>DBS Bank</td>     <td>Global Gains Limited</td>     <td>003-932398-0</td> 	    <td>DBSSGSG</td>     <td>0346756</td>     <td>RS - 24455</td> <td> 12 Marina Boulevard,Marina Bay Financial Centre,Tower 3, Singapore 018982"
+		+"</td> </tr></table>"
+		
+		+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><span style='font-size:12.0pt'>"
+		+"or Bank Account in thru our partner </span></p>"
 	
-	}catch(Exception e){
-	//	e.printStackTrace();
-		logger.error("Exception -->"+e.getMessage());
-
-	}
+		+"<table style=\"width:100%:border:2px;\">   <tr>    <th>Name of Bank</th>     <th>Bank Account Holder</th> "
+		+"<th>Bank Account Number</th> 	    <th>Swift Code</th>     <th>CHIPS UID Number</th>     <th>Telex Number</th>     <th>Bank Address</th>   </tr>   <tr>"
+		+"<td style='text-align: center;'>CIMB NIAGA</td>  <td style='text-align: center;'>Blueprint Nusatara Indonesia</td>     <td style='text-align: center;'>800077326600</td> 	    <td style='text-align: center;'>BNIAIDJA</td>     <td style='text-align: center;'>84711</td>"
+		+"<td style='text-align: center;'>60875 - 60877 NAGA HO IA</td>  <td style='text-align: center;'> GrahaNiaga / Niaga Tower Jl. Jend. SudirmanKav. 58, Jakarta 12190</td> </tr></table>"
+		
+		+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+		+"Member ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+newCodeFinal+"</span></b></p>"
+		
+		+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>Member "
+		+"fees Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+member.getPayAmt()+" SGD </span></b></p>"
+		
+		+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>Admin "
+		+"fees &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'>   "+member.getAdminFees()+" SGD </span>"
+		+"</span></b></p>"
+		
+		+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>Total"
+		+" Amount in SGD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+member.getTotalFees()+" SGD</span></b><b"
+		+"style='mso-bidi-font-weight:normal'></b></p>"
+		
+		+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+		+"Member Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+member.getTriptype()+"</span></b>"
+		+"</span></b></p>"
+		
+		
+		+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+		+"Login user name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+member.getUsername()+"</span></b>"
+		+"</span></b></p>"
+		
+		
+		+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+		+"Login password &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+member.getPassword()+"</span></b>"
+		+"</span></b></p>"
+		
+		
+		
+		
+		+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b"
+		+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>After the "
+		+"deposits were made, kindly e-mail the Bank deposit slip to us at ( </span></b><a"
+		+"href=\"mailto:finance@gglway.com\"><b style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt'>finance@gglway.com</span></b></a><b"
+		+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>). The "
+		+"original deposit slips are to be kept by customer. Should you have any queries,"
+		+"please feel free to contact us through e-mail( </span></b><a"
+		+"href=\"mailto:admin@gglway.com\"><b style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt'>admin@gglway.com</span></b></a><b"
+		+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'> ).<o:p></o:p></span></b></p>"
+		+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%'>The management shall hold full "
+		+"responsibilities when client deposited to the above said account.<o:p></o:p></span></b></p>"
+		+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%'>For and on behalf of<o:p></o:p></span></b></p>"
+		+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%'>Global Gains Limited</span></b><a"
+		+"name=\"GoBack\"></a><b style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%;font-family:\"Arial\",\"sans-serif\";"
+		+"mso-fareast-language:ZH-CN'><o:p></o:p></span></b></p> </div> </body> </html>";
+		
+		try {
+			/*Class.forName(JDBC_DRIVER);
+			con=DriverManager.getConnection(DB_URL_EMAIL, USER, PASS);
+			stmt=con.createStatement();
+			preparedStatement=con.prepareStatement("insert into email_temp (toaddress,subject,message,status) values(?,?,?,?)");
+		
+			preparedStatement.setString(1, member.getEmailID());
+			preparedStatement.setString(2, "Registration Successfully on GLG Membership"); 
+			preparedStatement.setString(3, emailMessage);// Message
+			preparedStatement.setString(4, "GGL");
+			//preparedStatement.setDate(5, );
+			preparedStatement.executeUpdate();	*/
+			
+			logger.info("Calling Email Service -------------");
+			PushEmail.sendMail(member.getEmailID(),"Registration Successfully on GLG Membership",emailMessage);
+			logger.info("Successfully  Email Called Service------------");			
+			logger.info("Successfully Saved data.");
+		
+		}catch(Exception e){
+		//	e.printStackTrace();
+			logger.error("Exception -->"+e.getMessage());
+	
+		}
 	}
 //----------------- Admin Register New Member Notification --------------
-	public static void adminRegalertEmail(Member member,String newCodeFinal){
+public static void adminRegalertEmail(Member member,String newCodeFinal){
 	logger.info("Inside Admin Alert Registration Email Method()----------------------------");
 	
 	logger.info("Sender Email -->"+member.getEmailID());
@@ -889,232 +887,362 @@ public static void ReservationRejectMail(User user){
 }
 
 //----------------- Admin New Withdraw  Notification --------------
-		public static void adminwithdrawalertEmail(Member member){
-			logger.info("Inside Admin Alert Withdraw Email Method()----------------------------");
+public static void adminwithdrawalertEmail(Member member){
+	logger.info("Inside Admin Alert Withdraw Email Method()----------------------------");
+
+	logger.info("Pay amount -->"+member.getPayAmt());
+	logger.info("Member type -->"+member.getActType());
+	logger.info("Member user name -->"+member.getUsername());
+	logger.info("Member password -->"+member.getPassword());
+
+	String emailReservationMessage ="<html> <head> <style> table, th, td {     border: 1px solid black;} </style> </head> "
+		+"<body lang=EN-US link=\"#0563C1\"  vlink=\"#954F72\" style='tab-interval:.5in'> <div class=Section1> <p class=MsoNoSpacing align=center style='text-align:center'><b"
+		+"style='mso-bidi-font-weight:normal;color:blue;'><u><span style='font-size:26.0pt'>GGL NEW WITHDRAW ALERT</span></u></b><b style='mso-bidi-font-weight:normal'><u><span"
+		+"style='font-size:26.0pt;mso-fareast-font-family:\"Times New Roman\";mso-fareast-theme-font:"
+		+"minor-fareast;mso-fareast-language:ZH-CN'><o:p></o:p></span></u></b></p> <p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><o:p>&nbsp;</o:p></p>"
+		+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
+		+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>Dear GGL Admin,</span></b></p>"
+		+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b"
+		+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
 		
-			logger.info("Pay amount -->"+member.getPayAmt());
-			logger.info("Member type -->"+member.getActType());
-			logger.info("Member user name -->"+member.getUsername());
-			logger.info("Member password -->"+member.getPassword());
+		+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+		+"You have alert for New Member reservation details in below </span></p>"	
+
+		+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+		+"Member ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'> </span>"+member.getMemberID()+"</span></p>"						
 		
-			String emailReservationMessage ="<html> <head> <style> table, th, td {     border: 1px solid black;} </style> </head> "
-				+"<body lang=EN-US link=\"#0563C1\"  vlink=\"#954F72\" style='tab-interval:.5in'> <div class=Section1> <p class=MsoNoSpacing align=center style='text-align:center'><b"
-				+"style='mso-bidi-font-weight:normal;color:blue;'><u><span style='font-size:26.0pt'>GGL NEW WITHDRAW ALERT</span></u></b><b style='mso-bidi-font-weight:normal'><u><span"
-				+"style='font-size:26.0pt;mso-fareast-font-family:\"Times New Roman\";mso-fareast-theme-font:"
-				+"minor-fareast;mso-fareast-language:ZH-CN'><o:p></o:p></span></u></b></p> <p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><o:p>&nbsp;</o:p></p>"
-				+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
-				+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>Dear GGL Admin,</span></b></p>"
-				+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b"
-				+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
-				
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-				+"You have alert for New Member reservation details in below </span></p>"	
+		+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
+		+"Commission Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'>  </span> "+member.getMemberCommition()+" </span></p>"
+		
+		+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> Overriding Amount "
+		+" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'>   "+member.getMemberOvrriding()+" </span></span></p>"
+		
+		+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>Withdraw Amount"
+		+" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'>  </span>"+ member.getTotalAmount() +"</span><b"
+		+"style='mso-bidi-font-weight:normal'></b></p>"  
+		
+		+"<br/><br/>  "
 
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-				+"Member ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'> </span>"+member.getMemberID()+"</span></p>"						
-				
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
-				+"Commission Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'>  </span> "+member.getMemberCommition()+" </span></p>"
-				
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> Overriding Amount "
-				+" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'>   "+member.getMemberOvrriding()+" </span></span></p>"
-				
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>Withdraw Amount"
-				+" &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'>  </span>"+ member.getTotalAmount() +"</span><b"
-				+"style='mso-bidi-font-weight:normal'></b></p>"  
-				
-				+"<br/><br/>  "
+		+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+		+"Please approve &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'>  </span>  <a href=\"http://ggl.neotural.com/login\" style='color:blue;'>GGL LOGIN</a> </span></b></p>"			
+		
+		+"<br/><br/> <br/><br/> "
+		
+		+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%'>For and on behalf of,</span></b></p>"
+		
+		+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%'>Global Gains Limited</span><a"
+		+"name=\"GoBack\"></a><b style='mso-bidi-font-weight:normal'><span"
+		+"style='font-size:12.0pt;line-height:115%;font-family:\"Arial\",\"sans-serif\";"
+		+"mso-fareast-language:ZH-CN'></span></b></p>"
+		
+		+"</div> </body> </html>";
 
-				+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-				+"Please approve &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'>  </span>  <a href=\"http://ggl.neotural.com/login\" style='color:blue;'>GGL LOGIN</a> </span></b></p>"			
-				
-				+"<br/><br/> <br/><br/> "
-				
-				+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%'>For and on behalf of,</span></b></p>"
-				
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%'>Global Gains Limited</span><a"
-				+"name=\"GoBack\"></a><b style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;font-family:\"Arial\",\"sans-serif\";"
-				+"mso-fareast-language:ZH-CN'></span></b></p>"
-				
-				+"</div> </body> </html>";
-
-				try {
-				/*	Class.forName(JDBC_DRIVER);
-					con=DriverManager.getConnection(DB_URL_EMAIL, USER, PASS);
-					stmt=con.createStatement();
-					preparedStatement=con.prepareStatement("insert into email_temp (toaddress,subject,message,status) values(?,?,?,?)");
+		try {
+		/*	Class.forName(JDBC_DRIVER);
+			con=DriverManager.getConnection(DB_URL_EMAIL, USER, PASS);
+			stmt=con.createStatement();
+			preparedStatement=con.prepareStatement("insert into email_temp (toaddress,subject,message,status) values(?,?,?,?)");
+	
+			preparedStatement.setString(1, adminMailID);
+			preparedStatement.setString(2, "GGL NEW WITHDRAW ALERT"); 
+			preparedStatement.setString(3, emailReservationMessage);// Message
+			preparedStatement.setString(4, "GGL");
+			preparedStatement.executeUpdate();	*/
+			logger.info("Calling Email Service -------------");
+			PushEmail.sendMail(adminMailID,"GGL NEW WITHDRAW ALERT",emailReservationMessage);
+			logger.info("Successfully  Email Called Service------------");
 			
-					preparedStatement.setString(1, adminMailID);
-					preparedStatement.setString(2, "GGL NEW WITHDRAW ALERT"); 
-					preparedStatement.setString(3, emailReservationMessage);// Message
-					preparedStatement.setString(4, "GGL");
-					preparedStatement.executeUpdate();	*/
-					logger.info("Calling Email Service -------------");
-					PushEmail.sendMail(adminMailID,"GGL NEW WITHDRAW ALERT",emailReservationMessage);
-					logger.info("Successfully  Email Called Service------------");
-					
-				
-				}catch(Exception e){
-					logger.error("Exception -->"+e.getMessage());
-				}
 		
-			}		
-
-		//----------------- Withdraw Approval  Notification --------------
-		public static void WithdrawApproveMail(Member member){
-			logger.info("Inside Admin Alert Withdraw Email Method()----------------------------");
-		
-			logger.info("Sender Email -->"+member.getEmailID());
-		
-			String WithdrawApproveMail ="<html> <head> <style> table, th, td {     border: 1px solid black;} </style> </head> "
-				+"<body lang=EN-US link=\"#0563C1\"  vlink=\"#954F72\" style='tab-interval:.5in'> <div class=Section1> <p class=MsoNoSpacing align=center style='text-align:center'><b"
-				+"style='mso-bidi-font-weight:normal;color:blue;'><u><span style='font-size:26.0pt'>GGL WITHDRAW APPROVAL EMAIL</span></u></b><b style='mso-bidi-font-weight:normal'><u><span"
-				+"style='font-size:26.0pt;mso-fareast-font-family:\"Times New Roman\";mso-fareast-theme-font:"
-				+"minor-fareast;mso-fareast-language:ZH-CN'><o:p></o:p></span></u></b></p> <p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><o:p>&nbsp;</o:p></p>"
-				+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
-				+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>Dear Member,</span></b></p>"
-				+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b"
-				+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
-			
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-				+"Admin have successfully approved the Withdraw and Approval details in below</span></p>"	
-						
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
-				+"Member ID  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "
-				+member.getMemberNumber()+ " </span></p>"
-				
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
-				+"User Name  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "
-				+member.getUsername()+ " </span></p>"
-				
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
-				+"Withdraw Amount  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " +member.getTotalAmount()+ " </span></p>"
-
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
-				+"Approved Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+Custom.getCurrentDate()+" </span></span></p>" 		
-				
-				+"<br/><br/> <br/><br/> "
-				
-				+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%'>For and on behalf of,</span></b></p>"
-				
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%'>Global Gains Limited</span><a"
-				+"name=\"GoBack\"></a><b style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;font-family:\"Arial\",\"sans-serif\";"
-				+"mso-fareast-language:ZH-CN'></span></b></p>"
-				
-				+"</div> </body> </html>";	
-		
-				try {
-				/*	Class.forName(JDBC_DRIVER);
-					con=DriverManager.getConnection(DB_URL_EMAIL, USER, PASS);
-					stmt=con.createStatement();
-					preparedStatement=con.prepareStatement("insert into email_temp (toaddress,subject,message,status) values(?,?,?,?)");
-			
-					preparedStatement.setString(1, member.getEmailID());
-					preparedStatement.setString(2, "GGL ADMIN IS APPROVED YOUR WITHDRAW"); 
-					preparedStatement.setString(3, WithdrawApproveMail);// Message
-					preparedStatement.setString(4, "GGL");
-					preparedStatement.executeUpdate();	*/
-					logger.info("Calling Email Service -------------");
-					PushEmail.sendMail(member.getEmailID(),"GGL ADMIN IS APPROVED YOUR WITHDRAW",WithdrawApproveMail);
-					logger.info("Successfully  Email Called Service------------");
-				
-				}catch(Exception e){
-				     logger.error("Exception -->"+e.getMessage());
-				}
+		}catch(Exception e){
+			logger.error("Exception -->"+e.getMessage());
 		}
-				
-		//----------------- Withdraw Rejection Notification --------------
-		public static void WithdrawRejectMail(Member member){
-			String WithdrawRejectMail ="<html> <head> <style> table, th, td {     border: 1px solid black;} </style> </head> "
-				+"<body lang=EN-US link=\"#0563C1\"  vlink=\"#954F72\" style='tab-interval:.5in'> <div class=Section1> <p class=MsoNoSpacing align=center style='text-align:center'><b"
-				+"style='mso-bidi-font-weight:normal;color:blue;'><u><span style='font-size:26.0pt'>GGL WITHDRAW REJECT EMAIL</span></u></b><b style='mso-bidi-font-weight:normal'><u><span"
-				+"style='font-size:26.0pt;mso-fareast-font-family:\"Times New Roman\";mso-fareast-theme-font:"
-				+"minor-fareast;mso-fareast-language:ZH-CN'><o:p></o:p></span></u></b></p> <p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><o:p>&nbsp;</o:p></p>"
-				+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
-				+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>Dear Member,</span></b></p>"
-				+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b"
-				+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
 
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-				+"Admin have rejected the Withdraw and Rejection details in below </span></p>"
-				
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
-				+"Member ID  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "
-				+member.getMemberNumber()+ " </span></p>"
-				
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
-				+"User Name  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "
-				+member.getUsername()+ " </span></p>"
-				
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
-				+"Withdraw Amount  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " +member.getTotalAmount()+ " </span></p>"
-				
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
-				+"Rejected Date  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+Custom.getCurrentDate()+" </span></p>" 		
-				
-				+"<br/><br/> <br/><br/> "
-				
-				+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%'>For and on behalf of,</span></b></p>"
-				
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%'>Global Gains Limited</span><a"
-				+"name=\"GoBack\"></a><b style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;font-family:\"Arial\",\"sans-serif\";"
-				+"mso-fareast-language:ZH-CN'></span></b></p>"
-				
-				+"</div> </body> </html>";	
+	}		
+
+	//----------------- Withdraw Approval  Notification --------------
+	public static void WithdrawApproveMail(Member member){
+		logger.info("Inside Admin Alert Withdraw Email Method()----------------------------");
+	
+		logger.info("Sender Email -->"+member.getEmailID());
+	
+		String WithdrawApproveMail ="<html> <head> <style> table, th, td {     border: 1px solid black;} </style> </head> "
+			+"<body lang=EN-US link=\"#0563C1\"  vlink=\"#954F72\" style='tab-interval:.5in'> <div class=Section1> <p class=MsoNoSpacing align=center style='text-align:center'><b"
+			+"style='mso-bidi-font-weight:normal;color:blue;'><u><span style='font-size:26.0pt'>GGL WITHDRAW APPROVAL EMAIL</span></u></b><b style='mso-bidi-font-weight:normal'><u><span"
+			+"style='font-size:26.0pt;mso-fareast-font-family:\"Times New Roman\";mso-fareast-theme-font:"
+			+"minor-fareast;mso-fareast-language:ZH-CN'><o:p></o:p></span></u></b></p> <p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><o:p>&nbsp;</o:p></p>"
+			+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
+			+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>Dear Member,</span></b></p>"
+			+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b"
+			+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
 		
-				try {
-					/*Class.forName(JDBC_DRIVER);
-					con=DriverManager.getConnection(DB_URL_EMAIL, USER, PASS);
-					stmt=con.createStatement();
-					preparedStatement=con.prepareStatement("insert into email_temp (toaddress,subject,message,status) values(?,?,?,?)");
-					preparedStatement.setString(1, member.getEmailID());
-					preparedStatement.setString(2, "GGL ADMIN IS REJECTED YOUR WITHDRAW"); 
-					preparedStatement.setString(3, WithdrawRejectMail);// Message
-					preparedStatement.setString(4, "GGL");
-					preparedStatement.executeUpdate();	*/
+			+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+			+"Admin have successfully approved the Withdraw and Approval details in below</span></p>"	
 					
-					logger.info("Calling Email Service -------------");
-					PushEmail.sendMail(member.getEmailID(),"GGL ADMIN IS REJECTED YOUR WITHDRAW",WithdrawRejectMail);
-					logger.info("Successfully  Email Called Service------------");
+			+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
+			+"Member ID  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "
+			+member.getMemberNumber()+ " </span></p>"
+			
+			+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
+			+"User Name  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "
+			+member.getUsername()+ " </span></p>"
+			
+			+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
+			+"Withdraw Amount  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " +member.getTotalAmount()+ " </span></p>"
+
+			+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
+			+"Approved Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+Custom.getCurrentDate()+" </span></span></p>" 		
+			
+			+"<br/><br/> <br/><br/> "
+			
+			+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%'>For and on behalf of,</span></b></p>"
+			
+			+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%'>Global Gains Limited</span><a"
+			+"name=\"GoBack\"></a><b style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;font-family:\"Arial\",\"sans-serif\";"
+			+"mso-fareast-language:ZH-CN'></span></b></p>"
+			
+			+"</div> </body> </html>";	
+	
+			try {
+			/*	Class.forName(JDBC_DRIVER);
+				con=DriverManager.getConnection(DB_URL_EMAIL, USER, PASS);
+				stmt=con.createStatement();
+				preparedStatement=con.prepareStatement("insert into email_temp (toaddress,subject,message,status) values(?,?,?,?)");
+		
+				preparedStatement.setString(1, member.getEmailID());
+				preparedStatement.setString(2, "GGL ADMIN IS APPROVED YOUR WITHDRAW"); 
+				preparedStatement.setString(3, WithdrawApproveMail);// Message
+				preparedStatement.setString(4, "GGL");
+				preparedStatement.executeUpdate();	*/
+				logger.info("Calling Email Service -------------");
+				PushEmail.sendMail(member.getEmailID(),"GGL ADMIN IS APPROVED YOUR WITHDRAW",WithdrawApproveMail);
+				logger.info("Successfully  Email Called Service------------");
+			
+			}catch(Exception e){
+			     logger.error("Exception -->"+e.getMessage());
+			}
+	}
+			
+	//----------------- Withdraw Rejection Notification --------------
+	public static void WithdrawRejectMail(Member member){
+		String WithdrawRejectMail ="<html> <head> <style> table, th, td {     border: 1px solid black;} </style> </head> "
+			+"<body lang=EN-US link=\"#0563C1\"  vlink=\"#954F72\" style='tab-interval:.5in'> <div class=Section1> <p class=MsoNoSpacing align=center style='text-align:center'><b"
+			+"style='mso-bidi-font-weight:normal;color:blue;'><u><span style='font-size:26.0pt'>GGL WITHDRAW REJECT EMAIL</span></u></b><b style='mso-bidi-font-weight:normal'><u><span"
+			+"style='font-size:26.0pt;mso-fareast-font-family:\"Times New Roman\";mso-fareast-theme-font:"
+			+"minor-fareast;mso-fareast-language:ZH-CN'><o:p></o:p></span></u></b></p> <p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><o:p>&nbsp;</o:p></p>"
+			+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
+			+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>Dear Member,</span></b></p>"
+			+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b"
+			+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
+
+			+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+			+"Admin have rejected the Withdraw and Rejection details in below </span></p>"
+			
+			+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
+			+"Member ID  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "
+			+member.getMemberNumber()+ " </span></p>"
+			
+			+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
+			+"User Name  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "
+			+member.getUsername()+ " </span></p>"
+			
+			+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
+			+"Withdraw Amount  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " +member.getTotalAmount()+ " </span></p>"
+			
+			+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'> "
+			+"Rejected Date  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+Custom.getCurrentDate()+" </span></p>" 		
+			
+			+"<br/><br/> <br/><br/> "
+			
+			+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%'>For and on behalf of,</span></b></p>"
+			
+			+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%'>Global Gains Limited</span><a"
+			+"name=\"GoBack\"></a><b style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;font-family:\"Arial\",\"sans-serif\";"
+			+"mso-fareast-language:ZH-CN'></span></b></p>"
+			
+			+"</div> </body> </html>";	
+	
+			try {
+				/*Class.forName(JDBC_DRIVER);
+				con=DriverManager.getConnection(DB_URL_EMAIL, USER, PASS);
+				stmt=con.createStatement();
+				preparedStatement=con.prepareStatement("insert into email_temp (toaddress,subject,message,status) values(?,?,?,?)");
+				preparedStatement.setString(1, member.getEmailID());
+				preparedStatement.setString(2, "GGL ADMIN IS REJECTED YOUR WITHDRAW"); 
+				preparedStatement.setString(3, WithdrawRejectMail);// Message
+				preparedStatement.setString(4, "GGL");
+				preparedStatement.executeUpdate();	*/
 				
-				}catch(Exception e){
-				     logger.error("Exception -->"+e.getMessage());
-				}
-		}	
+				logger.info("Calling Email Service -------------");
+				PushEmail.sendMail(member.getEmailID(),"GGL ADMIN IS REJECTED YOUR WITHDRAW",WithdrawRejectMail);
+				logger.info("Successfully  Email Called Service------------");
+			
+			}catch(Exception e){
+			     logger.error("Exception -->"+e.getMessage());
+			}
+	}	
 		
 		
-		public static void saveEmailReferMember1(Member member,String newCodeFinal){
-			logger.info("---- Update Member 1 Reference ----"); 
-			logger.info("Sender Email -->"+member.getEmailID1());
+	public static void saveEmailReferMember1(Member member,String newCodeFinal){
+		logger.info("---- Update Member 1 Reference ----"); 
+		logger.info("Sender Email -->"+member.getEmailID1());
+		logger.info("Sender Member ID -->"+newCodeFinal);
+		logger.info("Member type -->"+member.getTriptype());
+		logger.info("Pay amount -->"+member.getRef_commition1());
+		logger.info("Member user name -->"+member.getRef_ovrriding1());
+		
+		String emailMessage ="<html> <head> <style> table, th, td {     border: 1px solid black;} </style> </head> "
+			+"<body lang=EN-US link=\"#0563C1\"  vlink=\"#954F72\" style='tab-interval:.5in'> <div class=Section1> <p class=MsoNoSpacing align=center style='text-align:center'><b"
+			+"style='mso-bidi-font-weight:normal;color:blue;'><u><span style='font-size:26.0pt'>GGL NEW MEMBER REGISTRATION ALERT</span></u></b><b style='mso-bidi-font-weight:normal'><u><span"
+			+"style='font-size:26.0pt;mso-fareast-font-family:\"Times New Roman\";mso-fareast-theme-font:"
+			+"minor-fareast;mso-fareast-language:ZH-CN'><o:p></o:p></span></u></b></p> <p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><o:p>&nbsp;</o:p></p>"
+			+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
+			+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>Dear GGL Admin,</span></b></p>"
+			+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b"
+			+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
+			
+			+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+			+"Member ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+newCodeFinal+"</span></b></p>"
+			
+			+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+			+"Member Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+member.getTriptype()+"</span></b>"
+			+"</span></b></p>"
+
+			+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+			+"Commission Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+member.getRef_commition1()+" SGD </span></b></p>"
+			
+			+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+			+"Overriding Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'>   "+member.getRef_ovrriding1()+" SGD </span>"
+			+"</span></b></p>"
+
+			
+			+"<br/><br/> <br/><br/> "
+
+			+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%'>For and on behalf of,</span></b></p>"
+			
+			+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%'>Global Gains Limited</span><a"
+			+"name=\"GoBack\"></a><b style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;font-family:\"Arial\",\"sans-serif\";"
+			+"mso-fareast-language:ZH-CN'></span></b></p>"
+			
+			+"</div> </body> </html>";
+
+		
+			try {					
+				logger.info("Calling Email Service -------------");
+				PushEmail.sendMail(member.getEmailID1(),"Updation Successfully on Reference Member 1",emailMessage);
+				logger.info("Successfully  Email Called Service------------");			
+				logger.info("Successfully Saved data.");
+			
+			}catch(Exception e){
+			//	e.printStackTrace();
+				logger.error("Exception -->"+e.getMessage());
+
+			}
+	}
+	
+	public static void saveEmailReferMember2(Member member,String newCodeFinal){
+		
+		logger.info("---- Update Member 2 Reference ----"); 
+		logger.info("Sender Email -->"+member.getEmailID2());
+		logger.info("Sender Member ID -->"+newCodeFinal);
+		logger.info("Member type -->"+member.getTriptype());
+		logger.info("Pay amount -->"+member.getRef_commition2());
+		logger.info("Member user name -->"+member.getRef_ovrriding2());
+		
+		String emailMessage ="<html> <head> <style> table, th, td {     border: 1px solid black;} </style> </head> "
+			+"<body lang=EN-US link=\"#0563C1\"  vlink=\"#954F72\" style='tab-interval:.5in'> <div class=Section1> <p class=MsoNoSpacing align=center style='text-align:center'><b"
+			+"style='mso-bidi-font-weight:normal;color:blue;'><u><span style='font-size:26.0pt'>GGL NEW MEMBER REGISTRATION ALERT</span></u></b><b style='mso-bidi-font-weight:normal'><u><span"
+			+"style='font-size:26.0pt;mso-fareast-font-family:\"Times New Roman\";mso-fareast-theme-font:"
+			+"minor-fareast;mso-fareast-language:ZH-CN'><o:p></o:p></span></u></b></p> <p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><o:p>&nbsp;</o:p></p>"
+			+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
+			+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>Dear GGL Admin,</span></b></p>"
+			+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b"
+			+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
+			
+			+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+			+"Member ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+newCodeFinal+"</span></b></p>"
+			
+			+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+			+"Member Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+member.getTriptype()+"</span></b>"
+			+"</span></b></p>"
+
+			+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+			+"Commission Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+member.getRef_commition2()+" SGD </span></b></p>"
+			
+			+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+			+"Overriding Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'>   "+member.getRef_ovrriding2()+" SGD </span>"
+			+"</span></b></p>"
+
+			
+			+"<br/><br/> <br/><br/> "
+
+			+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%'>For and on behalf of,</span></b></p>"
+			
+			+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%'>Global Gains Limited</span><a"
+			+"name=\"GoBack\"></a><b style='mso-bidi-font-weight:normal'><span"
+			+"style='font-size:12.0pt;line-height:115%;font-family:\"Arial\",\"sans-serif\";"
+			+"mso-fareast-language:ZH-CN'></span></b></p>"
+			
+			+"</div> </body> </html>";
+
+		
+			try {					
+				logger.info("Calling Email Service -------------");
+				PushEmail.sendMail(member.getEmailID2(),"Updation Successfully on Reference Member 2",emailMessage);
+				logger.info("Successfully  Email Called Service------------");			
+				logger.info("Successfully Saved data.");
+			
+			}catch(Exception e){
+			//	e.printStackTrace();
+				logger.error("Exception -->"+e.getMessage());
+
+			}
+		}
+
+		public static void saveEmailReferMember3(Member member,String newCodeFinal){
+			
+			logger.info("---- Update Member 3 Reference ----"); 
+			logger.info("Sender Email -->"+member.getEmailID3());
 			logger.info("Sender Member ID -->"+newCodeFinal);
 			logger.info("Member type -->"+member.getTriptype());
-			logger.info("Pay amount -->"+member.getRef_commition1());
-			logger.info("Member user name -->"+member.getRef_ovrriding1());
+			logger.info("Pay amount -->"+member.getRef_commition3());
+			logger.info("Member user name -->"+member.getRef_ovrriding3());
 			
 			String emailMessage ="<html> <head> <style> table, th, td {     border: 1px solid black;} </style> </head> "
 				+"<body lang=EN-US link=\"#0563C1\"  vlink=\"#954F72\" style='tab-interval:.5in'> <div class=Section1> <p class=MsoNoSpacing align=center style='text-align:center'><b"
@@ -1134,84 +1262,19 @@ public static void ReservationRejectMail(User user){
 				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
 				+"Member Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+member.getTriptype()+"</span></b>"
 				+"</span></b></p>"
-
-				+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-				+"Commission Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+member.getRef_commition1()+" SGD </span></b></p>"
-				
-				+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-				+"Overriding Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'>   "+member.getRef_ovrriding1()+" SGD </span>"
-				+"</span></b></p>"
-
-				
-				+"<br/><br/> <br/><br/> "
-
-				+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%'>For and on behalf of,</span></b></p>"
-				
-				+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%'>Global Gains Limited</span><a"
-				+"name=\"GoBack\"></a><b style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;font-family:\"Arial\",\"sans-serif\";"
-				+"mso-fareast-language:ZH-CN'></span></b></p>"
-				
-				+"</div> </body> </html>";
-	
-			
-				try {					
-					logger.info("Calling Email Service -------------");
-					PushEmail.sendMail(member.getEmailID1(),"Updation Successfully on Reference Member 1",emailMessage);
-					logger.info("Successfully  Email Called Service------------");			
-					logger.info("Successfully Saved data.");
-				
-				}catch(Exception e){
-				//	e.printStackTrace();
-					logger.error("Exception -->"+e.getMessage());
-	
-				}
-		}
 		
-		public static void saveEmailReferMember2(Member member,String newCodeFinal){
-			
-			logger.info("---- Update Member 2 Reference ----"); 
-			logger.info("Sender Email -->"+member.getEmailID2());
-			logger.info("Sender Member ID -->"+newCodeFinal);
-			logger.info("Member type -->"+member.getTriptype());
-			logger.info("Pay amount -->"+member.getRef_commition2());
-			logger.info("Member user name -->"+member.getRef_ovrriding2());
-			
-			String emailMessage ="<html> <head> <style> table, th, td {     border: 1px solid black;} </style> </head> "
-				+"<body lang=EN-US link=\"#0563C1\"  vlink=\"#954F72\" style='tab-interval:.5in'> <div class=Section1> <p class=MsoNoSpacing align=center style='text-align:center'><b"
-				+"style='mso-bidi-font-weight:normal;color:blue;'><u><span style='font-size:26.0pt'>GGL NEW MEMBER REGISTRATION ALERT</span></u></b><b style='mso-bidi-font-weight:normal'><u><span"
-				+"style='font-size:26.0pt;mso-fareast-font-family:\"Times New Roman\";mso-fareast-theme-font:"
-				+"minor-fareast;mso-fareast-language:ZH-CN'><o:p></o:p></span></u></b></p> <p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><o:p>&nbsp;</o:p></p>"
-				+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
-				+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>Dear GGL Admin,</span></b></p>"
-				+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b"
-				+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
+				+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
+				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
+				+"Commission Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+member.getRef_commition3()+" SGD </span></b></p>"
 				
 				+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
 				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-				+"Member ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+newCodeFinal+"</span></b></p>"
-				
-				+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-				+"Member Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+member.getTriptype()+"</span></b>"
+				+"Overriding Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'>   "+member.getRef_ovrriding3()+" SGD </span>"
 				+"</span></b></p>"
-
-				+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-				+"Commission Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+member.getRef_commition2()+" SGD </span></b></p>"
-				
-				+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-				+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-				+"Overriding Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'>   "+member.getRef_ovrriding2()+" SGD </span>"
-				+"</span></b></p>"
-
+		
 				
 				+"<br/><br/> <br/><br/> "
-
+		
 				+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
 				+"style='font-size:12.0pt;line-height:115%'>For and on behalf of,</span></b></p>"
 				
@@ -1222,84 +1285,19 @@ public static void ReservationRejectMail(User user){
 				+"mso-fareast-language:ZH-CN'></span></b></p>"
 				
 				+"</div> </body> </html>";
-	
+		
 			
 				try {					
 					logger.info("Calling Email Service -------------");
-					PushEmail.sendMail(member.getEmailID2(),"Updation Successfully on Reference Member 2",emailMessage);
+					PushEmail.sendMail(member.getEmailID3(),"Updation Successfully on Reference Member 3",emailMessage);
 					logger.info("Successfully  Email Called Service------------");			
 					logger.info("Successfully Saved data.");
 				
 				}catch(Exception e){
 				//	e.printStackTrace();
 					logger.error("Exception -->"+e.getMessage());
-	
 				}
 			}
-
-			public static void saveEmailReferMember3(Member member,String newCodeFinal){
-				
-				logger.info("---- Update Member 3 Reference ----"); 
-				logger.info("Sender Email -->"+member.getEmailID3());
-				logger.info("Sender Member ID -->"+newCodeFinal);
-				logger.info("Member type -->"+member.getTriptype());
-				logger.info("Pay amount -->"+member.getRef_commition3());
-				logger.info("Member user name -->"+member.getRef_ovrriding3());
-				
-				String emailMessage ="<html> <head> <style> table, th, td {     border: 1px solid black;} </style> </head> "
-					+"<body lang=EN-US link=\"#0563C1\"  vlink=\"#954F72\" style='tab-interval:.5in'> <div class=Section1> <p class=MsoNoSpacing align=center style='text-align:center'><b"
-					+"style='mso-bidi-font-weight:normal;color:blue;'><u><span style='font-size:26.0pt'>GGL NEW MEMBER REGISTRATION ALERT</span></u></b><b style='mso-bidi-font-weight:normal'><u><span"
-					+"style='font-size:26.0pt;mso-fareast-font-family:\"Times New Roman\";mso-fareast-theme-font:"
-					+"minor-fareast;mso-fareast-language:ZH-CN'><o:p></o:p></span></u></b></p> <p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><o:p>&nbsp;</o:p></p>"
-					+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
-					+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>Dear GGL Admin,</span></b></p>"
-					+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b"
-					+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'><o:p>&nbsp;</o:p></span></b></p>"
-					
-					+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-					+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-					+"Member ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+newCodeFinal+"</span></b></p>"
-					
-					+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-					+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-					+"Member Type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "+member.getTriptype()+"</span></b>"
-					+"</span></b></p>"
-			
-					+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-					+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-					+"Commission Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+member.getRef_commition3()+" SGD </span></b></p>"
-					
-					+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-					+"style='font-size:12.0pt;line-height:115%;background:yellow;mso-highlight:yellow'>"
-					+"Overriding Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style='mso-spacerun:yes'>   "+member.getRef_ovrriding3()+" SGD </span>"
-					+"</span></b></p>"
-			
-					
-					+"<br/><br/> <br/><br/> "
-			
-					+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
-					+"style='font-size:12.0pt;line-height:115%'>For and on behalf of,</span></b></p>"
-					
-					+"<p class=MsoNormal style='mso-bidi-font-weight:normal'><span"
-					+"style='font-size:12.0pt;line-height:115%'>Global Gains Limited</span><a"
-					+"name=\"GoBack\"></a><b style='mso-bidi-font-weight:normal'><span"
-					+"style='font-size:12.0pt;line-height:115%;font-family:\"Arial\",\"sans-serif\";"
-					+"mso-fareast-language:ZH-CN'></span></b></p>"
-					
-					+"</div> </body> </html>";
-			
-				
-					try {					
-						logger.info("Calling Email Service -------------");
-						PushEmail.sendMail(member.getEmailID3(),"Updation Successfully on Reference Member 3",emailMessage);
-						logger.info("Successfully  Email Called Service------------");			
-						logger.info("Successfully Saved data.");
-					
-					}catch(Exception e){
-					//	e.printStackTrace();
-						logger.error("Exception -->"+e.getMessage());
-					}
-				}
 
 			public static void websiteFeedBackMail(Member member) {
 					logger.info("Name ----->"+member.getFirstName());

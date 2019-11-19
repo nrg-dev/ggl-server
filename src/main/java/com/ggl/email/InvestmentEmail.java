@@ -17,7 +17,7 @@ public class InvestmentEmail {
 	public static String adminMailID="globalgains@gmail.com";
 
 	//--------- Closed After 8 Tree Comes ----
-	public static void EightComeOneClosedEmail(Member member){
+	public static void EightComeOneClosedEmail(Member member,String emailID){
 		logger.info("----------------- Inside Public Tree EightComeOneClosedEmail -------------------");
 		logger.info("Unit ID ------->"+member.getInvoiceNumber()); 
 		logger.info("Email ID ----------->"+member.getEmailID()); 
@@ -45,7 +45,7 @@ public class InvestmentEmail {
 		
 		try {
 			logger.info("Calling Email Service -------------");
-			PushEmail.sendMail(member.getEmailID(),"GGL MEMBER Unit Closed",email_closed);
+			PushEmail.sendMail(emailID,"GGL MEMBER Unit Closed",email_closed);
 			logger.info("Successfully  Email Called Service------------");	
 			
 		}catch(Exception e) {
@@ -168,7 +168,7 @@ public class InvestmentEmail {
 			logger.info("Exception -->"+e.getMessage());
 		}
 		
-		}
+	}
 	
 	// Own Tree
 	public static void tempOwnTree(ArrayList<Member> list,String emailID) {
@@ -400,16 +400,15 @@ public class InvestmentEmail {
 				PushEmail.sendMail(emailID,"GGL Own Tree | Purchase Order Confirmed Invoice",email);
 				logger.info("Successfully  Email Called Service------------");	
 				
-			logger.info("Successfully Saved data.");
+				logger.info("Successfully Saved data.");
 			}catch(Exception e) {
 				logger.info("Exception -->"+e.getMessage());
 			}
 			
-			}
+		}
 		
 
-// Approved Public Tree 
-		
+		// Approved Public Tree 
 		public static void approvePublicTree( Publictree l ,String emailID) {
 			
 			StringBuffer sb = new StringBuffer();
@@ -667,6 +666,5 @@ public class InvestmentEmail {
 				logger.info("Exception -->"+e.getMessage());
 			}
 		}
-		
 		
 }
