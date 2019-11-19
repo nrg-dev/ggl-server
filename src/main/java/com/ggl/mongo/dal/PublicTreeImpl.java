@@ -891,10 +891,10 @@ public class PublicTreeImpl implements PublicTreeDAL {
 					 logger.info("----------- No Email ID----------------");
 				}
 				else{
-					 logger.info("----------- Found Email ID----------------");
+					 logger.info("----------- Found Closed Mini Email ID----------------"+userdetails.getEmail1());
 					 // Push Email start 
 					member.setBookingCode(minitree.getInvoiceNumber()); 
-					InvestmentEmail.ThreeComeOneClosedEmail(member); 
+					InvestmentEmail.ThreeComeOneClosedEmail(member,userdetails.getEmail1()); 
 					InvestmentEmail.adminminiunitclosedalertEmail(member);
 				}
 			return "";

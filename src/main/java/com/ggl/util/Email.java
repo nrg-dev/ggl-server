@@ -343,7 +343,7 @@ try {
 			
 		
 		}catch(Exception e){
-			logger.error("Admin Uniit Close Exception --------->"+e.getMessage());
+			logger.error("Admin Unit Close Exception --------->"+e.getMessage());
 		}
 	
 	}
@@ -421,13 +421,13 @@ try {
 	+"<p class=MsoNoSpacing style='text-align:justify;text-justify:inter-ideograph'><b"
 	+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>After the "
 	+"deposits were made, kindly e-mail the Bank deposit slip to us at ( </span></b><a"
-	+"href=\"mailto:finance@globalgains.co\"><b style='mso-bidi-font-weight:normal'><span"
-	+"style='font-size:12.0pt'>finance@globalgains.co</span></b></a><b"
+	+"href=\"mailto:finance@gglway.com\"><b style='mso-bidi-font-weight:normal'><span"
+	+"style='font-size:12.0pt'>finance@gglway.com</span></b></a><b"
 	+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'>). The "
 	+"original deposit slips are to be kept by customer. Should you have any queries,"
 	+"please feel free to contact us through e-mail( </span></b><a"
-	+"href=\"mailto:admin@globalgains.co\"><b style='mso-bidi-font-weight:normal'><span"
-	+"style='font-size:12.0pt'>admin@globalgains.co</span></b></a><b"
+	+"href=\"mailto:admin@gglway.com\"><b style='mso-bidi-font-weight:normal'><span"
+	+"style='font-size:12.0pt'>admin@gglway.com</span></b></a><b"
 	+"style='mso-bidi-font-weight:normal'><span style='font-size:12.0pt'> ).<o:p></o:p></span></b></p>"
 	+"<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span"
 	+"style='font-size:12.0pt;line-height:115%'>The management shall hold full "

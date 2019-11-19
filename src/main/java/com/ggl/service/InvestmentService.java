@@ -1519,7 +1519,7 @@ public class InvestmentService implements Filter{
 					 logger.info("----------- No Email ID----------------");
 				 }
 				 else{
-					 logger.info("----------- Found Email ID----------------");
+					 logger.info("----------- Found Temp Mini Email ID----------------"+userdetails.getEmail1());
 					 // Push Email start 
 				     InvestmentEmail.tempMiniTree(miniList,userdetails.getEmail1());
 				}
@@ -1644,7 +1644,7 @@ public class InvestmentService implements Filter{
 				 logger.info("----------- No Email ID----------------");
 			   }
 			   else{
-				 logger.info("----------- Found Email ID----------------");
+				 logger.info("----------- Found Approve Email ID----------------"+userdetails.getEmail1());
 				 // Push Email start 
 			     InvestmentEmail.approveMiniTree(minitree,userdetails.getEmail1());
 			     // Push Email End

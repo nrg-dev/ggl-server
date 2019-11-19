@@ -466,6 +466,7 @@ public class InvestmentEmail {
 		//---------- Insertion Email For MiniTree --------
 		public static void tempMiniTree(ArrayList<Member> miniList,String emailID) {
 			logger.info("------------ Inside tempMiniTree Method Calling -----------------");
+			logger.info("Temp Mini EmailID ------>"+emailID);
 			StringBuffer sb = new StringBuffer();
 			StringBuffer payment = new StringBuffer();
 			int tempAmount=0;
@@ -526,10 +527,10 @@ public class InvestmentEmail {
 		}
 		
 		//--------- Closed After 3 Tree Comes ----
-		public static void ThreeComeOneClosedEmail(Member member){
+		public static void ThreeComeOneClosedEmail(Member member,String emailID){
 			logger.info("----------------- Inside Mini Tree ThreeComeOneClosedEmail -------------------");
 			logger.info("Unit ID ------->"+member.getInvoiceNumber()); 
-			logger.info("Email ID ----------->"+member.getEmailID()); 
+			logger.info("Closed Mini Email ID ----------->"+emailID); 
 			String email_closed ="<html><head><style> .panel { border: 1px solid #00a65a;border-radius:0 !important;transition: box-shadow 0.5s; } </style> "
 				+ "<style> table, th , td  { width: 40%;border-collapse: collapse;padding: 5px;margin-left:30%; margin-right:30%; } table thead tr{ background-color: #3c8dbc;}</style> "
 		 		+ "<style> table tbody tr:nth-child(odd) { background-color: #dbdee0; } table tbody tr:nth-child(even) { background-color: #b3acac; }tbody {text-align: center;}</style></head>"
@@ -554,7 +555,7 @@ public class InvestmentEmail {
 			
 			try {
 				logger.info("Calling Email Service -------------");
-				PushEmail.sendMail(member.getEmailID(),"GGL MINI MEMBER Unit Closed",email_closed);
+				PushEmail.sendMail(emailID,"GGL MINI MEMBER Unit Closed",email_closed);
 				logger.info("Successfully  Email Called Service ------------");	
 				
 			}catch(Exception e) {
@@ -623,6 +624,7 @@ public class InvestmentEmail {
 
 		//------ Approve Mini Unit Invoice -------
 		public static void approveMiniTree(MiniTree minitree, String emailID) {
+			logger.info("Approve Mini EmailID ------>"+emailID);
 			StringBuffer sb = new StringBuffer();
 			int tempAmount=100;
 			sb.append("<h1> Mini Unit Original Invoice Number #:"+minitree.getInvoiceNumber()+"</h1>");
