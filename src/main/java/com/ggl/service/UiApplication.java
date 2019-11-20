@@ -1501,6 +1501,8 @@ public class UiApplication implements Filter{
 	       logger.info("[UiApplication-memberPayment] Transfer Account Number ----------->"+member.getBankAcctNumber());
 	       logger.info("[UiApplication-memberPayment] Transfer Account Name ------------>"+member.getUsername());
 	       logger.info("[UiApplication-memberPayment] MemberID ----------->"+member.getMemberID());
+	       logger.info("[UiApplication-memberPayment] Tree Name ------------>"+member.getTreeName());
+	       logger.info("[UiApplication-memberPayment] Invoice Number ----------->"+member.getInvoiceNumber());
 		   try 
 		   {
 			  member= bo.memberPayment(member); 

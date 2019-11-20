@@ -2991,10 +2991,22 @@ public class GglDaoImpl implements GglDao {
 				payment.setTransferBank_Name(member.getBanktransfer());
 				payment.setTransferBankAcct_Name(member.getUsername());
 				payment.setTransferBankAcct_Number(member.getBankAcctNumber());
-				payment.setPayment_Path("/home/ec2-user/GGL/PaymentFiles/"+member.getMemberID()+".jpg");
 				logger.info("Payment Path ------>"+payment.getPayment_Path());
 				payment.setMember_Number(member.getMemberID()); 
 				payment.setAcctCreated_date(Custom.getCurrentDate());
+				payment.setTreeName(member.getTreeName());
+				payment.setInvoiceNumber(member.getInvoiceNumber()); 
+				if(payment.getTreeName().equalsIgnoreCase("") || payment.getTreeName() == null){
+					payment.setPayment_Path("/home/ec2-user/GGL/PaymentFiles/"+member.getMemberID()+".jpg");
+				}else if(payment.getTreeName().equalsIgnoreCase("publicTree")){
+					payment.setPayment_Path("/home/ec2-user/GGL/PublicPayment/"+member.getInvoiceNumber()+".jpg");
+				}else if(payment.getTreeName().equalsIgnoreCase("privateTree")){
+					payment.setPayment_Path("/home/ec2-user/GGL/PrivatePayment/"+member.getInvoiceNumber()+".jpg");
+				}else if(payment.getTreeName().equalsIgnoreCase("ownTree")){
+					payment.setPayment_Path("/home/ec2-user/GGL/OwnPayment/"+member.getInvoiceNumber()+".jpg");
+				}else if(payment.getTreeName().equalsIgnoreCase("miniTree")){
+					payment.setPayment_Path("/home/ec2-user/GGL/MiniPayment/"+member.getInvoiceNumber()+".jpg");
+				}
 				entityManager.persist(payment);		
 				 member.setStatus("success");
 			}catch(Exception e){
