@@ -113,5 +113,7 @@ public interface PublicTreeDAL {
 	public Resource loadMiniFile(String filename);
 	//------- Get MiniUnit Status Details ------
 	public List<MiniTree> getSinglePurchaseMiniUnitByUserId(String primaryKey);
+	//public List<TempPublicTree> getPublicInvoiceNumber();
+	public MiniTree addNewMiniSingleUnitTree(String invoiceNumber);  
 
 }

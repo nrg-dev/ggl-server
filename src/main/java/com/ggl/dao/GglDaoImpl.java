@@ -2991,12 +2991,32 @@ public class GglDaoImpl implements GglDao {
 				payment.setTransferBank_Name(member.getBanktransfer());
 				payment.setTransferBankAcct_Name(member.getUsername());
 				payment.setTransferBankAcct_Number(member.getBankAcctNumber());
-				payment.setPayment_Path("/home/ec2-user/GGL/PaymentFiles/"+member.getMemberID()+".jpg");
-				logger.info("Payment Path ------>"+payment.getPayment_Path());
 				payment.setMember_Number(member.getMemberID()); 
 				payment.setAcctCreated_date(Custom.getCurrentDate());
+				payment.setTreeName(member.getTreeName());
+				payment.setInvoiceNumber(member.getInvoiceNumber()); 
+				logger.info("Tree Name ---"+member.getTreeName()); 
+				if(member.getTreeName() == null || member.getTreeName().equals("")){
+					logger.info("Tree Name Equal to null ---"); 
+					payment.setPayment_Path("/home/ec2-user/GGL/PaymentFiles/"+member.getMemberID()+".jpg");
+				}else if(member.getTreeName().equalsIgnoreCase("publicTree")){
+					logger.info("Tree Name Equal to Public Tree ---"); 
+					payment.setPayment_Path("/home/ec2-user/GGL/PublicPayment/"+member.getInvoiceNumber()+".jpg");
+				}else if(member.getTreeName().equalsIgnoreCase("privateTree")){
+					logger.info("Tree Name Equal to Private Tree ---");
+					payment.setPayment_Path("/home/ec2-user/GGL/PrivatePayment/"+member.getInvoiceNumber()+".jpg");
+				}else if(member.getTreeName().equalsIgnoreCase("ownTree")){
+					logger.info("Tree Name Equal to Own Tree ---");
+					payment.setPayment_Path("/home/ec2-user/GGL/OwnPayment/"+member.getInvoiceNumber()+".jpg");
+				}else if(member.getTreeName().equalsIgnoreCase("miniTree")){
+					logger.info("Tree Name Equal to Mini Tree ---");
+					payment.setPayment_Path("/home/ec2-user/GGL/MiniPayment/"+member.getInvoiceNumber()+".jpg");
+				}
+				logger.info("Payment Path ------>"+payment.getPayment_Path());
+
 				entityManager.persist(payment);		
-				 member.setStatus("success");
+				member.setStatus("success");
+				logger.info("------ Successfully Saved ---");
 			}catch(Exception e){
 				 member.setStatus("failure");
 				logger.info("Exception -->"+e.getMessage());

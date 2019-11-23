@@ -45,6 +45,12 @@ public class PaymentDetails implements Serializable {
 	
 	@Column(name="acctCreated_date")
 	private Date acctCreated_date;
+	
+	@Column(name="treeName")
+	private String treeName;
+	
+	@Column(name="invoiceNumber")
+	private String invoiceNumber;
 
 	public PaymentDetails() {
 	}
@@ -129,6 +135,20 @@ public class PaymentDetails implements Serializable {
 		this.acctCreated_date = acctCreated_date;
 	}
 	
-	
+	public String getTreeName() {
+		return treeName;
+	}
+
+	public void setTreeName(String treeName) {
+		this.treeName = treeName;
+	}
+
+	public String getInvoiceNumber() {
+		return invoiceNumber;
+	}
+
+	public void setInvoiceNumber(String invoiceNumber) {
+		this.invoiceNumber = invoiceNumber;
+	}
 
 }

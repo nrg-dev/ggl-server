@@ -1712,7 +1712,35 @@ public class InvestmentService implements Filter{
 				
 			}
 			return new ResponseEntity<List<MiniTree>>(responseList, HttpStatus.CREATED);
-
 		}
+		
+		// -------------------- Public Tree Based InvoiceNumber --------------
+		/*@CrossOrigin(origins = "http://localhost:80")
+		@RequestMapping(value="/getPublicInvoiceNumber",method=RequestMethod.GET)
+		public ResponseEntity<?> getPublicInvoiceNumber() {
+			logger.info("--------- Inside getPublicInvoiceNumber Calling ---------");
+			List<TempPublicTree> alltempList = null;
+			ArrayList<TempPublicTree> invoiceList = null;
+			try{
+				alltempList = new ArrayList<TempPublicTree>();
+				invoiceList = new ArrayList<TempPublicTree>();
+				alltempList = publicTreeDAL.getPublicInvoiceNumber();
+				logger.info("List Size --"+alltempList.size());
+				for(int i=0; i<alltempList.size(); i++) {
+					TempPublicTree temppublictree = new TempPublicTree();
+					temppublictree.setInvoiceCode(alltempList.get(i).getInvoiceCode());
+					logger.info("Invoice Code --->"+temppublictree.getInvoiceCode()); 
+					invoiceList.add(temppublictree);
+				}
+				logger.info("Invoice List Size --"+invoiceList.size() + "Invoice Code -->"+invoiceList.get(0).getInvoiceCode());				
+			}catch(Exception e) {
+				logger.info("getPublicInvoiceNumber Exception ------------->"+e.getMessage());
+			}finally {
+				
+			}
+		    return new ResponseEntity<ArrayList<TempPublicTree>>(invoiceList, HttpStatus.CREATED);	
+		} */
+		
+
 }
 		

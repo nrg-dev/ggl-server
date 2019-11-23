@@ -861,13 +861,17 @@ public class PublicTreeImpl implements PublicTreeDAL {
 			mongoTemplate.updateFirst(query, update, MiniTree.class);
 			logger.info("------------- Re Order start --------------");
 			reOrderMiniTree();
+			logger.info("Closed Status InvoiceNumber --->"+minitree.getInvoiceNumber()); 
+			MiniTree minitreeUserID = new MiniTree();
+			minitreeUserID = addNewMiniSingleUnitTree(minitree.getInvoiceNumber());
+			logger.info("After add New MiniTree in Temp --->"+minitreeUserID.getUserID()); 
 			logger.info("---------------- Re Order end -----------------");
 			   // Save Fresh New Public Tree as Temp table start
 			   TempMiniTree tempminitree = new TempMiniTree();
 			   tempminitree.setPaymentStatus("NOT PAID");
 			   tempminitree.setPayAmount(100);
 			   tempminitree.setNumberofUnits(1);
-			   tempminitree.setUserID(userID);
+			   tempminitree.setUserID(minitreeUserID.getUserID());
 			   tempminitree.setCurrency("SGD");
 			   
 			   RandomNumber randamNumber= randamNumberDAL1.getTempMiniRandomNumber();
@@ -926,6 +930,14 @@ public class PublicTreeImpl implements PublicTreeDAL {
 	        }
 		}
 		
+		@Override
+		public MiniTree addNewMiniSingleUnitTree(String invoiceNumber){
+			MiniTree response=null;
+			Query query = new Query();
+			query.addCriteria(Criteria.where("invoiceNumber").is(invoiceNumber));
+			response = mongoTemplate.findOne(query, MiniTree.class);
+			return response;
+		}
 		//----- Remove Temp Mini Tree ---------
 		@Override
 		public boolean RemoveTempMiniSingleUnitTree(TempMiniTree temptree){
@@ -1005,4 +1017,11 @@ public class PublicTreeImpl implements PublicTreeDAL {
 			list = mongoTemplate.find(query, MiniTree.class);
 			return list;
 		}
+		
+		/*@Override
+		public List<TempPublicTree> getPublicInvoiceNumber() {
+			List<TempPublicTree> list;
+			list = mongoTemplate.findAll(TempPublicTree.class);
+			return list;
+		}*/
 }
