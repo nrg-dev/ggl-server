@@ -880,6 +880,7 @@ public class PublicTreeImpl implements PublicTreeDAL {
 			   tempminitree.setInvoiceCode(randamNumber.getMiniInvCode() + nextInvoiceNumber);
 			   
 			   insertTempMiniUser(tempminitree);
+			   String newInvoiceCode = randamNumber.getMiniInvCode() + nextInvoiceNumber;
 			   
 			   RandomNumber document = new RandomNumber();
 			   document.setMiniCount(nextInvoiceNumber);
@@ -901,7 +902,7 @@ public class PublicTreeImpl implements PublicTreeDAL {
 					InvestmentEmail.ThreeComeOneClosedEmail(member,userdetails.getEmail1()); 
 					InvestmentEmail.adminminiunitclosedalertEmail(member);
 				}
-			return "";
+			return newInvoiceCode;
 		}
 		
 		//----- Re-Order MiniTree -----

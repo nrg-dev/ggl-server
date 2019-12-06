@@ -1565,8 +1565,8 @@ public class InvestmentService implements Filter{
 				member = new Member();
 				member.setNumberofUnit(1);
 				member.setUserLoginPrimaryKey(response.getUserID());					
-				boolean status = saveMiniTree(member);
-				if(status==true) {
+				member = saveMiniTree(member);
+				if(member.getBookingStatus().equalsIgnoreCase("true")) {
 					logger.info("Good!!!!");
 					member.setStatus("good");
 					// Remove temp data start
@@ -1588,11 +1588,11 @@ public class InvestmentService implements Filter{
 		}
 		
 		//----- Save Temp MiniTree to MiniTree -------
-		public boolean saveMiniTree(Member member) {
-			boolean status=false;
+		public Member saveMiniTree(Member member) {
 			logger.info("------------------ Inside MiniUnitSave  -----------------");
 			logger.info("------------------ Number of Units  -----------------"+member.getNumberofUnit());
 			int userID = member.getUserLoginPrimaryKey();
+			member.setBookingStatus("false");
 			try {
 				RandomNumber randamNumber = randamNumberDAL.getAllMiniRandamNumber();
 				logger.info("Mini User ID / Primary Key -->"+member.getUserLoginPrimaryKey());
@@ -1634,7 +1634,8 @@ public class InvestmentService implements Filter{
 					MiniTree minitreeupdate = new MiniTree();
 					minitreeupdate = publicTreeDAL.get3ComeOneOut();
 					logger.info("3 Come one Out Value ---------->"+minitreeupdate.getInvoiceNumber());
-					publicTreeDAL.updateMiniOutNumber(minitreeupdate,userID);
+					String newInvoiceCode = publicTreeDAL.updateMiniOutNumber(minitreeupdate,userID);
+					member.setMemberNumber(newInvoiceCode); 
 			   }
 			   randamNumberDAL.updateMiniRandamNumber(document);		
 			   logger.info("Save Mini Primary Key --->"+userID);
@@ -1649,13 +1650,13 @@ public class InvestmentService implements Filter{
 			     InvestmentEmail.approveMiniTree(minitree,userdetails.getEmail1());
 			     // Push Email End
 			   }   
-			   status=true;
+			   member.setBookingStatus("true");
 			}catch(Exception e) {
-				status = false;
+				member.setBookingStatus("false");
 			}finally {
 				
 			}
-			return status;
+			return member;
 		}
 		
 		// -------------------- Reject MiniTree value --------------
