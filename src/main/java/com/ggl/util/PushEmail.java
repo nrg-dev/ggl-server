@@ -25,8 +25,8 @@ public class PushEmail {
 	    static final String TO = "no-reply-nrg@neotural.com";  // Replace with a "To" address. If your account is still in the 
 	    static final String BODY = "This email was sent through the NRG";
 	    static final String SUBJECT = "Amazon SES test (SMTP interface accessed using Java)";
-	    static final String SMTP_USERNAME = "AKIAXDRZ4XPIH664GX2B";  // Replace with your SMTP username.
-	    static final String SMTP_PASSWORD = "BP26NOThtQRr//dCctaS0W0lf1YYYoQlahbYm4dALHwH";  // Replace with your SMTP password.
+	    static final String SMTP_USERNAME = "AKIAIULJ3MRRN5XAHR3Q";  // Replace with your SMTP username.
+	    static final String SMTP_PASSWORD = "AnsucrqTjowY8TsnUUWbVkjploV5kFy9PHVS9vSC50IR";  // Replace with your SMTP password.
 	    static final String HOST = "email-smtp.us-west-2.amazonaws.com"; 
 	    static final int PORT = 25;
 
